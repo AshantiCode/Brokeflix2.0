@@ -43,16 +43,32 @@ export default class Carousel extends React.Component {
     return (
       <div id="kitties">
         <div className="kitty onscreen">
-          <img src="./assets/glow-hero2.jpg" alt="Glow" />
+          <img
+            className="carousel-img"
+            src="./assets/glow-hero2.jpg"
+            alt="Glow"
+          />
         </div>
         <div className="kitty">
-          <img src="./assets/kimmy-hero2.jpg" alt="Kimmy Schmitd" />
+          <img
+            className="carousel-img"
+            src="./assets/kimmy-hero2.jpg"
+            alt="Kimmy Schmitd"
+          />
         </div>
         <div className="kitty">
-          <img src="./assets/trevor-hero.jpg" alt="Trevor Noah" />
+          <img
+            className="carousel-img"
+            src="./assets/trevor-hero.jpg"
+            alt="Trevor Noah"
+          />
         </div>
         <div className="kitty">
-          <img src="./assets/orange-hero.jpg" alt="Orange" />
+          <img
+            className="carousel-img"
+            src="./assets/orange-hero.jpg"
+            alt="Orange"
+          />
         </div>
         <div className="carousel-dots">
           <div className="fill" />

@@ -46,12 +46,9 @@ export default function Header(props) {
         <nav>
           <ul className="ul-flex-container">
             <li>
-              <img alt="" />
-            </li>
-            <li>
               {" "}
               <a href="/" className="no-link-styling">
-                <p>Log Out</p>
+                <p>Done</p>
               </a>
             </li>
           </ul>

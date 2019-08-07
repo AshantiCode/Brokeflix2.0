@@ -89,6 +89,17 @@ export default class Movies extends React.Component {
       </div>
     );
 
-    return <div className="item-list">{movieList}</div>;
+    // return <div className="item-list">{movieList}</div>;
+
+    return (
+      <div>
+        <p className="movie-welcome-text">
+          {" "}
+          Here you can read about movies that are currently running in movie
+          theaters.
+        </p>
+        <div className="item-list">{movieList}</div>
+      </div>
+    );
   }
 }

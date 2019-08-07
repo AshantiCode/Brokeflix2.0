@@ -185,6 +185,7 @@ label {
   height: 4.375rem; /*70px*/
   padding: 3rem;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   color: #fff;
   z-index: 1000;
@@ -196,6 +197,7 @@ ul > li {
   font-size: 0.875rem;
 }
 .nav-flex-container {
+  margin-left: 19%;
   display: flex;
   width: 82%;
   justify-content: space-between;
@@ -274,11 +276,21 @@ ul > li {
 /* CAROUSEL ======================*/
 
 #kitties {
+  width: 80vw;
   position: relative;
-  height: 400px;
+
+  height: 500px;
   overflow: hidden;
   z-index: 2;
   margin-bottom: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (max-width: 700px) {
+  #kitties {
+    height: 45vh;
+  }
 }
 
 .carousel-dots {
@@ -293,11 +305,18 @@ ul > li {
 .carousel-dots div {
   z-index: 10;
   display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin: 15px;
+  width: 0.8rem;
+  height: 0.8rem;
+  /* margin: 15px; */
+  margin: 0.8rem;
   border-radius: 50%;
   border: 2px solid white;
+}
+
+@media only screen and (max-width: 1000px) {
+  .carousel-dots div {
+    display: none;
+  }
 }
 
 .carousel-dots div.fill {
@@ -307,11 +326,21 @@ ul > li {
 .kitty {
   position: absolute;
   top: 0;
-  left: 120px;
+  /* left: 120px; */
+  left: 10%;
+
   transform: translateX(100%);
   height: 100%;
   width: 100%;
   z-index: 1;
+}
+
+.carousel-img {
+  /* max-width: 100%;
+  height: auto; */
+  width: 80%;
+  height: 117%;
+  object-fit: contain;
 }
 
 .kitty.onscreen {
@@ -326,11 +355,11 @@ ul > li {
   transition-duration: 1s;
 }
 
-.kitty img {
+/* .kitty img {
   width: 80%;
   height: 117%;
   object-fit: cover;
-}
+} */
 
 /* PLAYER  */
 .player-flex-container {
@@ -351,6 +380,15 @@ svg {
 }
 
 /* === MOVIES  AND  SHOWS  ==== */
+.movie-welcome-text {
+  width: 60%;
+  margin: 0 auto;
+  padding-top: 2rem;
+  opacity: 0.7;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .item-list {
   margin-top: 3rem;
   margin-left: 3rem;

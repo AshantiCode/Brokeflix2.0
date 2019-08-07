@@ -94,6 +94,15 @@ export default class TvShows extends React.Component {
         })}
       </div>
     );
-    return <div className="item-list">{showList}</div>;
+    return (
+      <div>
+        <p className="movie-welcome-text">
+          {" "}
+          Here you can read about TV Shows that are currently trending in the
+          world!
+        </p>
+        <div className="item-list">{showList}</div>;
+      </div>
+    );
   }
 }
