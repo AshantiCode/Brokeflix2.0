@@ -8,7 +8,7 @@ export default class VideoPlayer extends React.Component {
     const { playerUrl, description, title } = this.props;
     return (
       <div className="player-flex-container">
-        <Link to="/Start" className="no-link-styling">
+        <Link to="/Start" className="no-link-styling ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             data-name="Layer 1"

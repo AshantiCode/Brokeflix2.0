@@ -36,7 +36,7 @@ export default class Carousel extends React.Component {
       });
     });
 
-    // timer = setTimeout(moveKitties, 3000);
+    timer = setTimeout(moveKitties, 3000);
   }
 
   render() {

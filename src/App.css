@@ -177,6 +177,7 @@ label {
 /* HEADER */
 
 .app-background {
+  overflow-x: hidden;
   width: 100vw;
   height: 100%;
   background: #202020;
@@ -291,6 +292,13 @@ ul > li {
 @media only screen and (max-width: 700px) {
   #kitties {
     height: 45vh;
+    width: 100vw;
+  }
+}
+@media only screen and (min-width: 701px and max-width: 992px) {
+  #kitties {
+    height: 66vh;
+    margin-bottom: 0;
   }
 }
 
@@ -368,9 +376,24 @@ ul > li {
   justify-content: space-evenly;
   margin-top: 3.125rem; /*50px*/
 }
+
 .video-description {
   width: 250px;
 }
+
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .video-description {
+    padding: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    width: auto;
+  }
+  .player-flex-container {
+    margin-top: 0;
+    flex-direction: column;
+  }
+}
+
 .video-title {
   margin-bottom: 1.25rem; /*20px*/
   color: #db1b28;
@@ -378,6 +401,22 @@ ul > li {
 }
 svg {
   fill: white;
+}
+
+@media only screen and (max-width: 767px) {
+  svg {
+    display: none;
+  }
+
+  #ytplayer {
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .player-flex-container {
+    flex-direction: column;
+  }
 }
 
 /* === MOVIES  AND  SHOWS  ==== */
