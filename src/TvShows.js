@@ -70,12 +70,11 @@ export default class TvShows extends React.Component {
         {shows.map(show => {
           return (
             <div key={show.id} className="item-card">
-              <img
-                src={`${baseUrl}${show.poster_path}`}
-                alt="Poster of Movie"
-              />
-              <div className="item-details" id="heart-container">
-                <h2 className="item-title">{show.name}</h2>
+              <div className="image-wrapper">
+                <img
+                  src={`${baseUrl}${show.poster_path}`}
+                  alt="Poster of Movie"
+                />
                 <Heart
                   id="favorite-heart-shows"
                   addToFavorite={this.addToFavorite}
@@ -84,6 +83,10 @@ export default class TvShows extends React.Component {
                   imgUrl={show.poster_path}
                   favorite={show.favorite}
                 />
+              </div>
+              <div className="item-details" id="heart-container">
+                <h2 className="item-title">{show.name}</h2>
+
                 <p className="item-description">{show.overview}</p>
                 <p className="item-voting">
                   Rating: <span>{show.vote_average}</span>

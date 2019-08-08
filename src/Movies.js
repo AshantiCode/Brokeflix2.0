@@ -37,7 +37,7 @@ export default class Movies extends React.Component {
   addToFavorite(movieTitle, movieId, imgUrl) {
     let newMovies = this.state.movies.map(movie => {
       if (movie.id === movieId) {
-        console.log("I am Running!");
+        // console.log("I am Running!");
         movie.favorite = true;
         return movie;
       } else {
@@ -64,11 +64,11 @@ export default class Movies extends React.Component {
         {movies.map(movie => {
           return (
             <div key={movie.id} className="item-card">
-              <img
-                src={`${baseUrl}${movie.poster_path}`}
-                alt="Poster from Movie"
-              />
-              <div className="item-details">
+              <div className="image-wrapper">
+                <img
+                  src={`${baseUrl}${movie.poster_path}`}
+                  alt="Poster from Movie"
+                />
                 <Heart
                   addToFavorite={this.addToFavorite}
                   movieId={movie.id}
@@ -76,6 +76,8 @@ export default class Movies extends React.Component {
                   imgUrl={movie.poster_path}
                   favorite={movie.favorite}
                 />
+              </div>
+              <div className="item-details">
                 <h2 className="item-title">{movie.title}</h2>
 
                 <p className="item-description">{movie.overview}</p>

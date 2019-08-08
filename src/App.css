@@ -382,7 +382,7 @@ svg {
 
 /* === MOVIES  AND  SHOWS  ==== */
 .movie-welcome-text {
-  width: 42%;
+  /* width: 42%; */
   margin: 0 auto;
   padding: 2rem;
   opacity: 0.7;
@@ -399,14 +399,42 @@ svg {
   display: flex;
   flex-direction: column;
 }
+
+@media only screen and (max-width: 992px) {
+  .item-list {
+    margin-left: 0;
+  }
+}
 .item-card {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  width: 200px;
+  height: 300px;
 }
 
 .item-details {
   width: 50%;
+}
+
+@media only screen and (max-width: 992px) {
+  .item-details {
+    width: 80%;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
 }
 .item-title {
   margin-bottom: 1.25rem;
@@ -427,10 +455,9 @@ svg {
 
 /* FAVORITES  */
 .favorite-heart {
-  top: 253px;
-  right: 222px;
-  margin-left: 3rem;
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   cursor: pointer;
 }
 

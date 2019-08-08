@@ -16,14 +16,14 @@ export default class Teaser extends React.Component {
     this.searchYT = this.searchYT.bind(this);
   }
 
-  componentDidMount() {
-    this.searchYT({
-      q: `${this.props.genre}`,
-      part: "snippet",
-      type: "video",
-      maxResults: "2"
-    });
-  }
+  // componentDidMount() {
+  //   this.searchYT({
+  //     q: `${this.props.genre}`,
+  //     part: "snippet",
+  //     type: "video",
+  //     maxResults: "2"
+  //   });
+  // }
 
   async searchYT(options) {
     try {
