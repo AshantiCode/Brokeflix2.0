@@ -45,7 +45,7 @@ export default class Teaser extends React.Component {
     }
     const { teasers } = this.state;
     console.log("Teasers in Render:", teasers);
-    console.log("unique ID?:", teasers.id.videoId);
+    // console.log("unique ID?:", teasers.id.videoId);
 
     const teaserList = (
       <div className="teasers-list">
@@ -69,10 +69,10 @@ export default class Teaser extends React.Component {
                 )
               }
             >
-              <div key={teaser.id.videoId} className="teaser-box">
+              <div key={teaser.etag} className="teaser-box">
                 <img
                   src={teaser.snippet.thumbnails.medium.url}
-                  alt="Movie Teaser Thumbanial"
+                  alt="Movie Teaser Thumbnial"
                 />
                 <p className="teaser-description">{title}</p>
               </div>
