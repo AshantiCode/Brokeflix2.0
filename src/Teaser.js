@@ -84,6 +84,7 @@ export default class Teaser extends React.Component {
 
     return (
       <div>
+        <div className="down-arrow">&#8595;</div>
         <div className="teaser-list-container">
           <p className="category-name">{this.props.category}</p>
           {teaserList}

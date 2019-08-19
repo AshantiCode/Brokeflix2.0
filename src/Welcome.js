@@ -45,8 +45,6 @@ export default function Welcome() {
           </div>
         </div>
       </section>
-
-      {/*<Route exact path="/start" component={Start} />*/}
     </div>
   );
 }

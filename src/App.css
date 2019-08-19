@@ -114,65 +114,7 @@ span {
   width: 15rem;
 }
 
-.signin-button {
-  position: absolute;
-  top: 55px;
-  right: 71px;
-  padding: 0.625rem 1.25rem;
-}
-
-/* REGISTRATION */
-.register-container {
-  border-radius: 15px;
-  margin-left: 60%;
-}
-
-.registration-form {
-  border-radius: 10px;
-  margin-left: 400px;
-  width: 500px;
-  height: 493px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.register-input-group {
-  margin-top: 62px;
-  display: flex;
-  flex-direction: column;
-}
-
-/* LOGIN  */
-#back-register-link {
-  margin-top: 2rem;
-}
-
-.login-btn {
-  margin-top: 2rem;
-}
-
-.login-offer {
-  margin-top: 2.7rem;
-}
-
-input {
-  width: 250px;
-  border-radius: 20px;
-  height: 35px;
-  padding-left: 0.7rem;
-  font-size: 1rem;
-}
-
-label {
-  margin-top: 10px;
-  padding-left: 10px;
-  text-align: left;
-}
-
-/* =======================================================LOGGED IN /APP.JS=========================== */
+/* =======================================================START /APP.JS=========================== */
 
 /* HEADER */
 
@@ -205,6 +147,12 @@ ul > li {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 700px) {
+  .nav-flex-container {
+    margin-left: auto;
+  }
+}
+
 .ul-flex-container {
   display: flex;
   align-items: center;
@@ -234,6 +182,12 @@ ul > li {
 
 .teasers-list::-webkit-scrollbar {
   display: none;
+}
+
+.down-arrow {
+  font-size: 3rem;
+  text-align: center;
+  margin-top: -93px;
 }
 
 .teaser-list-container {
@@ -335,7 +289,6 @@ ul > li {
 .kitty {
   position: absolute;
   top: 0;
-  /* left: 120px; */
   left: 10%;
 
   transform: translateX(100%);
@@ -345,8 +298,6 @@ ul > li {
 }
 
 .carousel-img {
-  /* max-width: 100%;
-  height: auto; */
   width: 80%;
   height: 117%;
   object-fit: contain;
@@ -363,12 +314,6 @@ ul > li {
   transition-property: transform;
   transition-duration: 1s;
 }
-
-/* .kitty img {
-  width: 80%;
-  height: 117%;
-  object-fit: cover;
-} */
 
 /* PLAYER  ======================================*/
 .player-flex-container {
