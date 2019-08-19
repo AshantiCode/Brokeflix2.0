@@ -21,7 +21,7 @@ export default class Teaser extends React.Component {
       q: `${this.props.genre}`,
       part: "snippet",
       type: "video",
-      maxResults: "1"
+      maxResults: "8"
     });
   }
 
