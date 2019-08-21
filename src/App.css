@@ -199,13 +199,17 @@ ul > li {
 }
 
 .teasers-list {
-  overflow-x: auto;
+  overflow-x: hidden;
   min-width: 100%;
   min-width: 200px;
   display: flex;
   border: 1px solid white;
   -webkit-overflow-scrolling: touch;
   white-space: nowrap;
+}
+
+.teasers-list:hover {
+  overflow-x: scroll;
 }
 
 /* .teasers-list::-webkit-scrollbar {
