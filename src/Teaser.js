@@ -28,7 +28,7 @@ export default class Teaser extends React.Component {
   async searchYT(options) {
     try {
       const response = await YTSearch(API_KEY, options);
-      console.log("Response.items:", response.items);
+      // console.log("Response.items:", response.items);
 
       let teasers = response.items;
       this.setState({

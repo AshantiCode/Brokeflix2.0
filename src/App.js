@@ -47,19 +47,16 @@ export default class App extends React.Component {
             path="/start"
             render={() => (
               <div>
-                <Carousel />
                 <Teaser
                   setPlayerUrl={this.setPlayerUrl}
                   genre={"full movie drama"}
                   category={"Drama"}
                 />
-
                 <Teaser
                   setPlayerUrl={this.setPlayerUrl}
                   genre={"full movie comedy"}
                   category={"Comedy"}
                 />
-
                 <Teaser
                   setPlayerUrl={this.setPlayerUrl}
                   genre={"full movie romance"}
@@ -92,10 +89,9 @@ export default class App extends React.Component {
               );
             }}
           />
-
+          <Route exact path="/" component={Welcome} />
           <Route exact path="/movies" component={Movies} />
           <Route exact path="/shows" component={TvShows} />
-          <Route exact path="/" component={Welcome} />
         </div>
       </BrowserRouter>
     );
