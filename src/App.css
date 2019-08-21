@@ -176,7 +176,6 @@ ul > li {
 .teaser-list-container {
   margin-top: 75px;
   margin-left: 3rem;
-  overflow: scroll;
 }
 
 .slide-right-btn {
@@ -200,17 +199,18 @@ ul > li {
 }
 
 .teasers-list {
-  overflow-x: scroll;
+  overflow-x: auto;
   min-width: 100%;
   min-width: 200px;
   display: flex;
   border: 1px solid white;
   -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
 }
 
-.teasers-list::-webkit-scrollbar {
-  /* display: none; */
-}
+/* .teasers-list::-webkit-scrollbar {
+  display: none;
+} */
 
 .down-arrow {
   font-size: 3rem;
