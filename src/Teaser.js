@@ -14,6 +14,9 @@ export default class Teaser extends React.Component {
     };
 
     this.searchYT = this.searchYT.bind(this);
+    this.sideScroll = this.sideScroll.bind(this);
+    this.slideRight = this.slideRight.bind(this);
+    this.slideLeft = this.slideLeft.bind(this);
   }
 
   componentDidMount() {
@@ -23,6 +26,31 @@ export default class Teaser extends React.Component {
       type: "video",
       maxResults: "8"
     });
+  }
+
+  sideScroll(element, direction, speed, distance, step) {
+    let scrollAmount = 0;
+    let slideTimer = setInterval(function() {
+      if (direction === "left") {
+        element.scrollLeft -= step;
+      } else {
+        element.scrollLeft += step;
+      }
+      scrollAmount += step;
+      if (scrollAmount >= distance) {
+        window.clearInterval(slideTimer);
+      }
+    }, speed);
+  }
+
+  slideRight() {
+    let container = document.getElementsByClassName("teaser-box");
+    this.sideScroll(container, "right", 25, 500, 3);
+  }
+
+  slideLeft() {
+    let container = document.getElementsByClassName("teaser-box");
+    this.sideScroll(container, "left", 25, 500, 3);
   }
 
   async searchYT(options) {
@@ -72,7 +100,7 @@ export default class Teaser extends React.Component {
               <div key={teaser.etag} className="teaser-box">
                 <img
                   src={teaser.snippet.thumbnails.medium.url}
-                  alt="Movie Teaser Thumbnial"
+                  alt="Movie Teaser Thumbnail"
                 />
                 <p className="teaser-description">{title}</p>
               </div>
@@ -87,6 +115,22 @@ export default class Teaser extends React.Component {
         <div className="teaser-list-container">
           <p className="category-name">{this.props.category} &#8594;</p>
           {teaserList}
+          <button
+            onClick={e => this.slideRight(e)}
+            type="button"
+            className="slide-right-btn"
+          >
+            {" "}
+            &#8658;
+          </button>
+          <button
+            onClick={e => this.slideLeft(e)}
+            type="button"
+            className="slide-left-btn"
+          >
+            {" "}
+            &#8656;
+          </button>
         </div>
       </div>
     );

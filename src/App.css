@@ -172,8 +172,35 @@ ul > li {
 }
 
 /* TEASER  */
+
+.teaser-list-container {
+  margin-top: 75px;
+  margin-left: 3rem;
+  overflow: scroll;
+}
+
+.slide-right-btn {
+  position: absolute;
+  top: 41%;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 40px;
+  padding: 0;
+}
+
+.slide-left-btn {
+  position: absolute;
+  top: 41%;
+  left: 4%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 40px;
+  padding: 0;
+}
+
 .teasers-list {
-  overflow-x: auto;
+  overflow-x: scroll;
   min-width: 100%;
   min-width: 200px;
   display: flex;
@@ -182,18 +209,13 @@ ul > li {
 }
 
 .teasers-list::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 .down-arrow {
   font-size: 3rem;
   text-align: center;
   margin-top: -93px;
-}
-
-.teaser-list-container {
-  margin-top: 75px;
-  margin-left: 3rem;
 }
 
 .teaser-box {
