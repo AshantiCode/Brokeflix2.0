@@ -127,7 +127,7 @@ span {
 }
 .header-container {
   height: 4.375rem; /*70px*/
-  padding: 3rem;
+  padding: 100px 60px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -205,7 +205,7 @@ ul > li {
   display: flex;
   border: 1px solid white;
   -webkit-overflow-scrolling: touch;
-  white-space: nowrap;
+  transition: all 0.4s ease-in-out;
 }
 
 .teasers-list:hover {
