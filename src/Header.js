@@ -5,11 +5,13 @@ export default function Header(props) {
   // console.log(props);
   return (
     <div className="header-container ">
-      <img
-        src="./assets/brokeflix-logo2.png"
-        className="header-logo"
-        alt="Brokeflix Logo"
-      />
+      <Link to="/Start">
+        <img
+          src="./assets/brokeflix-logo2.png"
+          className="header-logo"
+          alt="Brokeflix Logo"
+        />
+      </Link>
       <div className="nav-flex-container">
         <nav>
           <ul className="ul-flex-container">

@@ -140,6 +140,7 @@ span {
     height: auto;
     flex-direction: column;
     padding: 2rem 0 0 0;
+    text-align: center;
   }
 }
 
@@ -167,13 +168,12 @@ ul > li {
   align-items: center;
 }
 .header-logo {
-  width: 18%;
+  width: 50%;
   margin-right: 1.5rem;
 }
 
 @media screen and (max-width: 700px) {
   .header-logo {
-    width: 50%;
     margin-bottom: 0.875rem;
     margin-right: 0;
   }
