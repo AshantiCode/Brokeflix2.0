@@ -53,7 +53,8 @@ export default class App extends React.Component {
                   genre={"full movie drama"}
                   category={"Drama"}
                 />
-                {/*<Teaser
+                *
+                <Teaser
                   setPlayerUrl={this.setPlayerUrl}
                   genre={"full movie comedy"}
                   category={"Comedy"}
@@ -72,7 +73,7 @@ export default class App extends React.Component {
                   setPlayerUrl={this.setPlayerUrl}
                   genre={"full movie family"}
                   category={"Family"}
-                />*/}
+                />
               </div>
             )}
           />
