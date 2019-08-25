@@ -6,7 +6,7 @@ export default function Header(props) {
   return (
     <div className="header-container ">
       <img
-        src=" https://fontmeme.com/permalink/190218/69c7fd6e696a0cbacc1bb2f2f04beb57.png"
+        src="./assets/brokeflix-logo2.png"
         className="header-logo"
         alt="Brokeflix Logo"
       />

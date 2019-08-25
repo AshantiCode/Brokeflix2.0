@@ -199,7 +199,7 @@ ul > li {
 }
 
 .teasers-list {
-  overflow-x: hidden;
+  overflow-x: scroll;
   min-width: 100%;
   min-width: 200px;
   display: flex;
