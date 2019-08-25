@@ -137,6 +137,7 @@ span {
 
 @media screen and (max-width: 768px) {
   .header-container {
+    height: auto;
     flex-direction: column;
     padding: 2rem 0 0 0;
   }
@@ -146,6 +147,7 @@ ul > li {
   list-style: none;
   padding-right: 1.5rem;
   font-size: 0.875rem;
+  cursor: pointer;
 }
 .nav-flex-container {
   margin-left: 19%;
