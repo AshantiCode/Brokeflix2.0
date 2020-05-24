@@ -1,80 +1,39 @@
 import React from "react";
+import Swiper from "swiper";
+import "swiper/css/swiper.min.css";
+import "./App.css";
 
 export default class Carousel extends React.Component {
   componentDidMount() {
-    let kitty = document.getElementsByClassName("kitty");
-    let current = 0;
-    let dot = document.querySelectorAll(".carousel-dots div");
-
-    let timer;
-
-    function moveKitties(next) {
-      kitty[current].classList.remove("onscreen");
-      dot[current].classList.remove("fill");
-      kitty[current].classList.add("exit");
-
-      current++;
-      if (current >= kitty.length) {
-        current = 0;
-      }
-      kitty[current].classList.add("onscreen");
-      dot[current].classList.add("fill");
-    }
-    document.addEventListener("transitionend", function fn(e) {
-      if (e.target.classList.contains("exit")) {
-        e.target.classList.remove("exit");
-        timer = setTimeout(moveKitties, 3000);
-      }
+    this.swiper = new Swiper(".swiper-container", {
+      speed: 400,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: true,
+      },
     });
-
-    [].slice.call(dot).forEach(function(dot, i) {
-      dot.addEventListener("click", function(e) {
-        console.log(i);
-
-        clearTimeout(timer);
-        moveKitties(i);
-      });
-    });
-
-    timer = setTimeout(moveKitties, 3000);
   }
 
   render() {
     return (
-      <div id="kitties">
-        <div className="kitty onscreen">
-          <img
-            className="carousel-img"
-            src="./assets/glow-hero2.jpg"
-            alt="Glow"
-          />
-        </div>
-        <div className="kitty">
-          <img
-            className="carousel-img"
-            src="./assets/kimmy-hero2.jpg"
-            alt="Kimmy Schmitd"
-          />
-        </div>
-        <div className="kitty">
-          <img
-            className="carousel-img"
-            src="./assets/trevor-hero.jpg"
-            alt="Trevor Noah"
-          />
-        </div>
-        <div className="kitty">
-          <img
-            className="carousel-img"
-            src="./assets/orange-hero.jpg"
-            alt="Orange"
-          />
-        </div>
-        <div className="carousel-dots">
-          <div className="fill" />
-          <div />
-          <div />
-          <div />
+      <div className="swiper-container">
+        <div className="swiper-wrapper">
+          <div className="swiper-slide">
+            1
+            <img src="../public/assets/glow-hero2.jpg" alt="" />
+          </div>
+          <div className="swiper-slide">
+            2
+            <img src="../public/assets/kimmy-hero2.jpg" alt="" />
+          </div>
+          <div className="swiper-slide">
+            3
+            <img src="../public/assets/trevor-hero.jpg" alt="" />
+          </div>
+          <div className="swiper-slide">
+            4
+            <img src="../public/assets/orange-hero.jpg" alt="" />
+          </div>
         </div>
       </div>
     );

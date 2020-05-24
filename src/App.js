@@ -23,13 +23,13 @@ export default class App extends React.Component {
     this.setState({
       playerUrl: url,
       description,
-      title
+      title,
     });
   }
 
   toggleActiveLink(e) {
     let links = document.querySelectorAll(".active");
-    [].forEach.call(links, function(link) {
+    [].forEach.call(links, function (link) {
       link.classList.remove("active");
       link.classList.add("no-link-styling");
     });
@@ -48,7 +48,7 @@ export default class App extends React.Component {
             render={() => (
               <div>
                 <Carousel />
-                <Teaser
+                {/* <Teaser
                   setPlayerUrl={this.setPlayerUrl}
                   genre={"full movie drama"}
                   category={"Drama"}
@@ -72,7 +72,7 @@ export default class App extends React.Component {
                 <Teaser
                   setPlayerUrl={this.setPlayerUrl}
                   genre={"full movie family"}
-                  category={"Family"}
+                  category={"Family"} */}
                 />
               </div>
             )}
