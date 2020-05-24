@@ -6,8 +6,11 @@ import "./App.css";
 export default class Carousel extends React.Component {
   componentDidMount() {
     this.swiper = new Swiper(".swiper-container", {
-      effect: "coverflow",
-
+      effect: "cube",
+      cubeEffect: {
+        shadowOffset: 60,
+        shadowScale: 2,
+      },
       centeredSlides: true,
       speed: 700,
       loop: true,
