@@ -48,7 +48,7 @@ export default class App extends React.Component {
             render={() => (
               <div>
                 <Carousel />
-                {/* <Teaser
+                <Teaser
                   setPlayerUrl={this.setPlayerUrl}
                   genre={"full movie drama"}
                   category={"Drama"}
@@ -72,7 +72,7 @@ export default class App extends React.Component {
                   setPlayerUrl={this.setPlayerUrl}
                   genre={"full movie family"}
                   category={"Family"}
-                /> */}
+                />
               </div>
             )}
           />
