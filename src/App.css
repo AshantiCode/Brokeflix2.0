@@ -208,7 +208,11 @@ ul > li {
   }
 }
 
-.slide-right-btn {
+.swiper-container-teaser {
+  width: 100%;
+}
+
+/* .slide-right-btn {
   position: absolute;
   top: 41%;
   right: 0;
@@ -226,7 +230,7 @@ ul > li {
   color: white;
   font-size: 40px;
   padding: 0;
-}
+} */
 
 .teasers-list {
   overflow-x: hidden;

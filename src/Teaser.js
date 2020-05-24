@@ -1,16 +1,15 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
-
 import YTSearch from "youtube-api-v3-search";
-
-const API_KEY = "AIzaSyBTB5tzRBATe1r4_VjQShi9jGyTRd6YfwM";
+import "./App.css";
+const Swiper = window.Swiper;
+const API_KEY = "AIzaSyA5wxR9MiDHSA22z6ZPZtP-jolTGogbcYo";
 
 export default class Teaser extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      teasers: []
+      teasers: [],
     };
 
     this.searchYT = this.searchYT.bind(this);
@@ -21,7 +20,13 @@ export default class Teaser extends React.Component {
       q: `${this.props.genre}`,
       part: "snippet",
       type: "video",
-      maxResults: "8"
+      maxResults: "8",
+    });
+
+    this.swiper = new Swiper(".swiper-container", {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      freeMode: true,
     });
   }
 
@@ -32,7 +37,7 @@ export default class Teaser extends React.Component {
 
       let teasers = response.items;
       this.setState({
-        teasers
+        teasers,
       });
     } catch (error) {
       console.log(error.message);
@@ -49,7 +54,7 @@ export default class Teaser extends React.Component {
 
     const teaserList = (
       <div className="teasers-list">
-        {teasers.map(teaser => {
+        {teasers.map((teaser) => {
           //cuts  i.e (subtitle Mexican) off
           let title = teaser.snippet.title;
 
@@ -69,7 +74,7 @@ export default class Teaser extends React.Component {
                 )
               }
             >
-              <div key={teaser.etag} className="teaser-box">
+              <div key={teaser.etag} className="swiper-slide">
                 <img
                   src={teaser.snippet.thumbnails.medium.url}
                   alt="Movie Teaser Thumbnail"
@@ -84,11 +89,21 @@ export default class Teaser extends React.Component {
 
     return (
       <div>
-        <div className="teaser-list-container">
-          <p className="category-name">{this.props.category} &#8594;</p>
-          {teaserList}
+        <p className="category-name">{this.props.category} &#8594;</p>
+        <div className="swiper-container">
+          <div className="swiper-wrapper">{teaserList}</div>
+          <div className="swiper-pagination"></div>
         </div>
       </div>
     );
   }
 }
+
+// {
+//   /* <div>
+//         <div className="teaser-list-container">
+//           <p className="category-name">{this.props.category} &#8594;</p>
+//           {teaserList}
+//         </div>
+//       </div> */
+// }
