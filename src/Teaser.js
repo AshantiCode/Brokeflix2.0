@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 import YTSearch from "youtube-api-v3-search";
 
-const API_KEY = "AIzaSyBTB5tzRBATe1r4_VjQShi9jGyTRd6YfwM";
+const API_KEY = "AIzaSyA5wxR9MiDHSA22z6ZPZtP-jolTGogbcYo";
 
 export default class Teaser extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      teasers: []
+      teasers: [],
     };
 
     this.searchYT = this.searchYT.bind(this);
@@ -21,7 +21,7 @@ export default class Teaser extends React.Component {
       q: `${this.props.genre}`,
       part: "snippet",
       type: "video",
-      maxResults: "8"
+      maxResults: "8",
     });
   }
 
@@ -32,7 +32,7 @@ export default class Teaser extends React.Component {
 
       let teasers = response.items;
       this.setState({
-        teasers
+        teasers,
       });
     } catch (error) {
       console.log(error.message);
@@ -49,7 +49,7 @@ export default class Teaser extends React.Component {
 
     const teaserList = (
       <div className="teasers-list">
-        {teasers.map(teaser => {
+        {teasers.map((teaser) => {
           //cuts  i.e (subtitle Mexican) off
           let title = teaser.snippet.title;
 
