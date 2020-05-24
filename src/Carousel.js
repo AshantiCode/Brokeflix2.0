@@ -1,17 +1,16 @@
 import React from "react";
-import Swiper from "swiper";
-import "swiper/css/swiper.min.css";
 import "./App.css";
+const Swiper = window.Swiper;
 
 export default class Carousel extends React.Component {
   componentDidMount() {
     this.swiper = new Swiper(".swiper-container", {
       effect: "cube",
       centeredSlides: true,
-      speed: 700,
+      speed: 1000,
       spaceBetween: 400,
       autoplay: {
-        delay: 4000,
+        delay: 3000,
         disableOnInteraction: true,
         stopOnLastSlide: true,
       },
