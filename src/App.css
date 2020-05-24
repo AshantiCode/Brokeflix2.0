@@ -291,14 +291,21 @@ ul > li {
 
 /* SWIPER     ======================*/
 .swiper-container {
-  width: 600px;
-  height: 300px;
-  border: 2px solid white;
+  width: 70%;
+  margin-top: 2rem;
 }
 
 .slide {
   width: 100%;
-  object-fit: contain;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: red !important;
+}
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
 }
 
 /* PLAYER  ======================================*/
