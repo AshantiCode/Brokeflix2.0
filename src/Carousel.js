@@ -7,14 +7,13 @@ export default class Carousel extends React.Component {
   componentDidMount() {
     this.swiper = new Swiper(".swiper-container", {
       effect: "cube",
-
       centeredSlides: true,
       speed: 700,
-      loop: true,
       spaceBetween: 400,
       autoplay: {
         delay: 4000,
         disableOnInteraction: true,
+        stopOnLastSlide: true,
       },
       pagination: {
         el: ".swiper-pagination",
