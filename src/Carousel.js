@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-const Swiper = window.Swiper;
+let Swiper = window.Swiper;
+window.Swiper = require("swiper/js/swiper");
 
 export default class Carousel extends React.Component {
   componentDidMount() {
@@ -29,28 +30,16 @@ export default class Carousel extends React.Component {
       <div className="swiper-container">
         <div className="swiper-wrapper">
           <div className="swiper-slide">
-            <img
-              src="./assets/glow-hero2-copy.jpg"
-              className="slide"
-              alt="Glow"
-            />
+            <img src="./assets/glow-hero2-copy.jpg" className="slide" alt="Glow" />
           </div>
           <div className="swiper-slide">
             <img src="./assets/kimmy-hero2.jpg" className="slide" alt="Kimmy" />
           </div>
           <div className="swiper-slide">
-            <img
-              src="./assets/trevor-hero.jpg"
-              className="slide"
-              alt="Trevor"
-            />
+            <img src="./assets/trevor-hero.jpg" className="slide" alt="Trevor" />
           </div>
           <div className="swiper-slide">
-            <img
-              src="./assets/orange-hero.jpg"
-              className="slide"
-              alt="Orange"
-            />
+            <img src="./assets/orange-hero.jpg" className="slide" alt="Orange" />
           </div>
         </div>
         <div className="swiper-button-next"></div>
