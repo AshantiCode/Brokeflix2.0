@@ -1,7 +1,5 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
-
 import YTSearch from "youtube-api-v3-search";
 
 const API_KEY = "AIzaSyA5wxR9MiDHSA22z6ZPZtP-jolTGogbcYo";
@@ -28,7 +26,6 @@ export default class Teaser extends React.Component {
   async searchYT(options) {
     try {
       const response = await YTSearch(API_KEY, options);
-      // console.log("Response.items:", response.items);
 
       let teasers = response.items;
       this.setState({
@@ -59,21 +56,9 @@ export default class Teaser extends React.Component {
           }
 
           return (
-            <Link
-              to="/player"
-              onClick={() =>
-                this.props.setPlayerUrl(
-                  teaser.id.videoId,
-                  teaser.snippet.description,
-                  title
-                )
-              }
-            >
+            <Link to="/player" onClick={() => this.props.setPlayerUrl(teaser.id.videoId, teaser.snippet.description, title)}>
               <div key={teaser.etag} className="teaser-box">
-                <img
-                  src={teaser.snippet.thumbnails.medium.url}
-                  alt="Movie Teaser Thumbnail"
-                />
+                <img src={teaser.snippet.thumbnails.medium.url} alt="Movie Teaser Thumbnail" />
                 <p className="teaser-description">{title}</p>
               </div>
             </Link>
