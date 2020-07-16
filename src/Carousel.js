@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-let Swiper = window.Swiper;
-window.Swiper = require("swiper/js/swiper");
+// const Swiper = window.Swiper;
+import Swiper from "swiper";
 
 export default class Carousel extends React.Component {
   componentDidMount() {
