@@ -19,7 +19,7 @@ export default class Teaser extends React.Component {
       q: `${this.props.genre}`,
       part: "snippet",
       type: "video",
-      maxResults: "1",
+      maxResults: "8",
     });
   }
 
@@ -41,8 +41,6 @@ export default class Teaser extends React.Component {
       return null;
     }
     const { teasers } = this.state;
-    // console.log("Teasers in Render:", teasers);
-    // console.log("unique ID?:", teasers.id.videoId);
 
     const teaserList = (
       <div className="teasers-list">
