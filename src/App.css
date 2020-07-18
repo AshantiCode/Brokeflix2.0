@@ -225,6 +225,7 @@ ul > li {
 
 .teasers-list {
   overflow-x: hidden;
+  overflow-y: hidden;
   min-width: 100%;
   min-width: 200px;
   display: flex;
