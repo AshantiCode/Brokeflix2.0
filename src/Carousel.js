@@ -1,51 +1,51 @@
 import React from "react";
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectCube, Autoplay } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.min.css";
+
+// Import Swiper styles
+import "swiper/swiper.scss";
+import "swiper/components/navigation/navigation.scss";
+import "swiper/components/pagination/pagination.scss";
+import "swiper/components/scrollbar/scrollbar.scss";
 import "./App.css";
-// const Swiper = window.Swiper;
-import Swiper from "swiper";
 
-export default class Carousel extends React.Component {
-  componentDidMount() {
-    this.swiper = new Swiper(".swiper-container", {
-      effect: "cube",
-      centeredSlides: true,
-      speed: 1000,
-      spaceBetween: 400,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: true,
-        stopOnLastSlide: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
-  }
+// install Swiper components
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectCube, Autoplay]);
 
-  render() {
-    return (
-      <div className="swiper-container">
-        <div className="swiper-wrapper">
-          <div className="swiper-slide">
-            <img src="./assets/glow-hero2-copy.jpg" className="slide" alt="Glow" />
-          </div>
-          <div className="swiper-slide">
-            <img src="./assets/kimmy-hero2.jpg" className="slide" alt="Kimmy" />
-          </div>
-          <div className="swiper-slide">
-            <img src="./assets/trevor-hero.jpg" className="slide" alt="Trevor" />
-          </div>
-          <div className="swiper-slide">
-            <img src="./assets/orange-hero.jpg" className="slide" alt="Orange" />
-          </div>
-        </div>
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-pagination"></div>
-      </div>
-    );
-  }
-}
+let Carousel = () => {
+  const params = {
+    effect: "cube",
+    speed: 800,
+    grabCursor: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: true,
+      stopOnLastSlide: true,
+    },
+  };
+
+  return (
+    <Swiper navigation pagination {...params}>
+      <SwiperSlide>
+        <img src="./assets/glow-hero2-copy.jpg" className="slide" alt="Glow" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="./assets/kimmy-hero2.jpg" className="slide" alt="Kimmy" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="./assets/trevor-hero.jpg" className="slide" alt="Trevor" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="./assets/orange-hero.jpg" className="slide" alt="Orange" />
+      </SwiperSlide>
+      <span className="swiper-container" slot="container-start"></span>
+      <span slot="container-end"></span>
+      <span className="swiper-wrapper" slot="wrapper-start"></span>
+      <span slot="wrapper-end"></span>
+    </Swiper>
+  );
+};
+
+export default Carousel;
