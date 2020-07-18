@@ -6,7 +6,6 @@ import VideoPlayer from "./VideoPlayer";
 import Movies from "./Movies";
 import TvShows from "./TvShows";
 import Welcome from "./Welcome";
-// import Heart from "./components/heart";
 
 import { BrowserRouter, Route } from "react-router-dom";
 
@@ -48,31 +47,11 @@ export default class App extends React.Component {
             render={() => (
               <div>
                 <Carousel />
-                <Teaser
-                  setPlayerUrl={this.setPlayerUrl}
-                  genre={"full movie drama"}
-                  category={"Drama"}
-                />
-                <Teaser
-                  setPlayerUrl={this.setPlayerUrl}
-                  genre={"full movie comedy"}
-                  category={"Comedy"}
-                />
-                <Teaser
-                  setPlayerUrl={this.setPlayerUrl}
-                  genre={"full movie romance"}
-                  category={"Romance"}
-                />
-                <Teaser
-                  setPlayerUrl={this.setPlayerUrl}
-                  genre={"full movie for kids"}
-                  category={"For Kids"}
-                />
-                <Teaser
-                  setPlayerUrl={this.setPlayerUrl}
-                  genre={"full movie family"}
-                  category={"Family"}
-                />
+                <Teaser setPlayerUrl={this.setPlayerUrl} genre={"full movie drama"} category={"Drama"} />
+                <Teaser setPlayerUrl={this.setPlayerUrl} genre={"full movie comedy"} category={"Comedy"} />
+                <Teaser setPlayerUrl={this.setPlayerUrl} genre={"full movie romance"} category={"Romance"} />
+                <Teaser setPlayerUrl={this.setPlayerUrl} genre={"full movie for kids"} category={"For Kids"} />
+                <Teaser setPlayerUrl={this.setPlayerUrl} genre={"full movie family"} category={"Family"} />
               </div>
             )}
           />
@@ -82,11 +61,7 @@ export default class App extends React.Component {
             path="/player"
             render={() => {
               return (
-                <VideoPlayer
-                  playerUrl={this.state.playerUrl}
-                  description={this.state.description}
-                  title={this.state.title}
-                />
+                <VideoPlayer playerUrl={this.state.playerUrl} description={this.state.description} title={this.state.title} />
               );
             }}
           />
